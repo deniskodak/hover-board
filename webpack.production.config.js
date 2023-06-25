@@ -32,6 +32,12 @@ module.exports = {
             },
         ],
     },
+    resolve: {
+        alias: {
+            Api: path.resolve(__dirname, 'src/api/'),
+        },
+        extensions: ['', '.js', '.css', 'module.scss', 'json'],
+    },
     plugins: [
         new CleanWebpackPlugin({
             cleanOnceBeforeBuildPatterns: ['**/*'],
