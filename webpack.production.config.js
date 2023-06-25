@@ -47,7 +47,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: './src/template.hbs',
-            filename: 'hover-board.html',
+            filename: 'index.html',
         }),
         new ModuleFederationPlugin({
             name: 'HoverBoardApp',

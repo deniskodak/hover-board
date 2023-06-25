@@ -13,27 +13,27 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "gh-pages": "^5.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
     "@babel/preset-env": "^7.22.5",
     "@babel/preset-react": "^7.22.5",
     "babel-eslint": "^10.1.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-loader-spinner": "^5.3.4",
-    "webpack": "^5.88.0",
-    "webpack-cli": "^5.1.4"
-  },
-  "devDependencies": {
     "babel-loader": "^9.1.2",
     "classnames": "^2.3.2",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.8.1",
-    "gh-pages": "^5.0.0",
     "handlebars-loader": "^1.7.3",
     "html-webpack-plugin": "^5.5.3",
     "mini-css-extract-plugin": "^2.7.6",
+    "react-loader-spinner": "^5.3.4",
     "react-select": "^5.7.3",
     "sass": "^1.63.6",
     "sass-loader": "^13.3.2",
+    "webpack": "^5.88.0",
+    "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
   }
 }
