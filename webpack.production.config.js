@@ -10,7 +10,7 @@ module.exports = {
     output: {
         path: path.join(__dirname, '/dist'),
         filename: 'hover-board.js',
-        publicPath: 'http://localhost:9001/',
+        publicPath: 'https://deniskodak.github.io/hover-board/',
     },
     mode: 'production',
     module: {
