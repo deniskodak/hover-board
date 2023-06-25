@@ -1,0 +1,22 @@
+{
+    "selectLabels": {
+        "default": "Pick mode",
+        "easyMode": "Easy mode",
+        "normalMode": "Normal mode",
+        "hardMode": "Hard mode"
+    },
+    "boardSizes":  {
+        "default": {
+            "field": null
+        },
+        "easyMode": {
+            "field": 3
+        },
+        "normalMode": {
+            "field": 9
+        },
+        "hardMode": {
+            "field": 12
+        }
+    }
+}
