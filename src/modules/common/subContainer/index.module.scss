@@ -1,6 +1,8 @@
+@import '../../../styles/mixin.scss';
+
 .subContainer {
-    display: flex;
-    flex-wrap: wrap;
-    width: 60%;
-    max-width: 600px;
+    @include media($from: 'md') {
+        width: 60%;
+        max-width: 600px;
+    }
 }

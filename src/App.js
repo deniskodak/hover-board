@@ -18,9 +18,7 @@ function App() {
     const { boardSizes } = getModes()
 
     useEffect(() => {
-        setTimeout(() => {
-            setAppState((state) => ({ ...state, modes: boardSizes }))
-        }, 350)
+        setAppState((state) => ({ ...state, modes: boardSizes }))
     }, [])
 
     return (

@@ -1,57 +1,57 @@
-import React, { useContext } from "react";
-import classNames from "classnames/bind";
-import AppContext from "../../../context";
+import React, { useContext } from 'react'
+import classNames from 'classnames/bind'
+import AppContext from '../../../context'
 
-import styles from "./index.module.scss";
+import styles from './index.module.scss'
 
 const ceilStyle = (boardSize) =>
-  classNames(
-    [styles.defaultCeil],
-    boardSize === 10
-      ? [styles.mediumCeil]
-      : boardSize === 15
-      ? [styles.smallCeil]
-      : null
-  );
+    classNames(
+        [styles.defaultCeil],
+        boardSize === 10
+            ? [styles.mediumCeil]
+            : boardSize === 15
+            ? [styles.smallCeil]
+            : null
+    )
 
 const Ceil = ({ boardSize, idx }) => {
-  const { setAppState } = useContext(AppContext);
+    const { setAppState } = useContext(AppContext)
 
-  const handleHover = ({ target }) => {
-    const hovered = target.getAttribute("hovered");
+    const handleHover = ({ target }) => {
+        const hovered = target.getAttribute('hovered')
 
-    const hoverInfo = {
-      row: target.parentNode.getAttribute("row"),
-      col: target.getAttribute("col"),
-    };
+        const hoverInfo = {
+            row: target.parentNode.getAttribute('row'),
+            col: target.getAttribute('col'),
+        }
 
-    changeHoverHistory(hoverInfo);
-    changeStyles(target, hovered);
-  };
-
-  const changeStyles = (el, hovered) => {
-    if (hovered === "false") {
-      el.setAttribute("hovered", "true");
-    } else {
-      el.setAttribute("hovered", "false");
+        changeHoverHistory(hoverInfo)
+        changeStyles(target, hovered)
     }
-  };
 
-  const changeHoverHistory = (hoverInfo) => {
-    setAppState((state) => ({
-      ...state,
-      hoverHistory: [...state.hoverHistory, hoverInfo],
-    }));
-  };
+    const changeStyles = (el, hovered) => {
+        if (hovered === 'false') {
+            el.setAttribute('hovered', 'true')
+        } else {
+            el.setAttribute('hovered', 'false')
+        }
+    }
 
-  return (
-    <div
-      col={idx}
-      className={ceilStyle(boardSize)}
-      onMouseEnter={handleHover}
-      hovered="false"
-    ></div>
-  );
-};
+    const changeHoverHistory = (hoverInfo) => {
+        setAppState((state) => ({
+            ...state,
+            hoverHistory: [...state.hoverHistory, hoverInfo],
+        }))
+    }
 
-export default Ceil;
+    return (
+        <div
+            col={idx}
+            className={ceilStyle(boardSize)}
+            onMouseEnter={handleHover}
+            hovered="false"
+        ></div>
+    )
+}
+
+export default Ceil
